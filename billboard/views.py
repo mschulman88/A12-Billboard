@@ -14,18 +14,18 @@ def index(request):
     return render(request, 'billboard/index.html')
 
 
-def login(request):
-    username = request.POST['username']
-    password = request.POST['password']
-    user = authenticate(username=username, password=password)
-    if user is not None:
-        if user.is_active:
-            login(request, user)
-            # Redirect to a success page.
-        else:
-            # Return a 'disabled account' error message
-        else:
-    # Return an 'invalid credentials' error message.
+# def login(request):
+#     username = request.POST['username']
+#     password = request.POST['password']
+#     user = authenticate(username=username, password=password)
+#     if user is not None:
+#         if user.is_active:
+#             login(request, user)
+#             # Redirect to a success page.
+#         else:
+#             # Return a 'disabled account' error message
+#         else:
+#     # Return an 'invalid credentials' error message.
 
 
 def register(request):
